@@ -39,8 +39,7 @@ The export creates related files with these extensions:
 
 ### 2. Get the configuration file
 
-Download **`Windows-WinNative-Cocoon-FIX2.json`** from this repository.  
-*(The JSON configuration file needs to be uploaded to the repository; until it appears in the file list, use the copy you already have.)*
+Download the configuration: **[Windows-WinNative-Cocoon-FIX2.json](./Windows-WinNative-Cocoon-FIX2.json)**.
 
 ### 3. Import it into Cocoon
 
