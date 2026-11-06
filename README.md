@@ -1,73 +1,85 @@
-# WinNative-Cocoon-Frontend-Integration-Launch-Windows-games-directly-from-Cocoon-
-WinNative + Cocoon Frontend Integration – Launch Windows games directly from Cocoon!
+# WinNative × Cocoon
+### Launch your Windows games directly from the Cocoon frontend on Android
 
-Hi everyone!
+A community-made custom platform configuration that lets **Cocoon** launch games through **WinNative**, so you can start your Windows games from your frontend library.
 
-I managed to get WinNative working as a player in Cocoon, allowing me to launch Windows games directly from the frontend instead of opening WinNative manually.
+> **Status:** Tested and working with WinNative Standard 0.8.0-beta on Android.
 
-I couldn't find an existing configuration for this combination, so I worked together with ChatGPT to create a custom Cocoon platform/player configuration.
+---
 
-I'm sharing our work with the community in case it's useful to other users!
+## ✨ Features
 
-Tested setup
+- Adds **Windows (WinNative)** as a custom platform in Cocoon.
+- Launches exported WinNative game shortcuts directly from Cocoon.
+- Keeps your Windows games together in your frontend library.
+- Community-made configuration; independent of the official WinNative and Cocoon projects.
 
-- WinNative Standard 0.8.0-beta
-- Cocoon Frontend
-- Android
-- Tested successfully with several games.
+## 📋 Tested setup
 
-Installation guide
+| Component | Version / platform |
+| --- | --- |
+| WinNative | Standard 0.8.0-beta |
+| Frontend | Cocoon |
+| Device | Android |
+| Games | Successfully tested with several games |
 
-1. Export your games from WinNative
+## 🚀 Installation
 
-Use WinNative's export/shortcut feature to generate the game shortcuts.
+### 1. Export your games from WinNative
 
-The exported files include:
+Use WinNative's export/shortcut feature for the games you want to add to Cocoon.
 
-- ".desktop"
-- ".png"
-- ".bin"
+The export creates related files with these extensions:
 
-Keep the exported files together in the same folder.
+- `.desktop`
+- `.png`
+- `.bin`
 
-2. Download our custom Cocoon configuration
+**Important:** Keep each game's exported files together, in the same folder.
 
-Download the attached file:
+### 2. Get the configuration file
 
-"Windows-WinNative-Cocoon-FIX2.json"
+Download **`Windows-WinNative-Cocoon-FIX2.json`** from this repository.  
+*(The JSON configuration file needs to be uploaded to the repository; until it appears in the file list, use the copy you already have.)*
 
-3. Import the configuration into Cocoon
+### 3. Import it into Cocoon
 
-1. Open Cocoon.
-2. Go to Settings.
-3. Open Library & Data → Platforms.
-4. Select Custom Platform.
-5. Choose the downloaded "Windows-WinNative-Cocoon-FIX2.json" file.
+1. Open **Cocoon**.
+2. Go to **Settings**.
+3. Open **Library & Data → Platforms**.
+4. Choose **Custom Platform**.
+5. Select `Windows-WinNative-Cocoon-FIX2.json`.
 
-4. Select your games folder
+### 4. Choose the games folder
 
-When Cocoon asks for the games directory, select the folder containing your exported WinNative shortcuts.
+When Cocoon asks for the games directory, select the folder containing the exported WinNative shortcut files.
 
-For example: "Juegos frontend"
+For example: `Juegos frontend`.
 
-5. Launch your games!
+### 5. Launch!
 
-Cocoon should now display a new platform called Windows (WinNative).
+Cocoon should now show a platform named **Windows (WinNative)**. Open it, choose a game, and launch it.
 
-Select a game and launch it. It should open directly in WinNative!
+---
 
-One small detail
+## ↩️ Returning to Cocoon
 
-When you exit a game, you may find yourself back in WinNative rather than Cocoon. You simply need to exit WinNative once more to return to Cocoon.
+When you exit a game, WinNative may remain open. To return to Cocoon, exit WinNative once more.
 
-About this configuration
+## 🛠️ Troubleshooting
 
-This configuration was created by me with the help of ChatGPT. We worked together to develop and test a solution for integrating WinNative with Cocoon, as I couldn't find an existing configuration for this combination.
+- **Games don't appear:** Check that you selected the folder containing the exported shortcut files.
+- **A game fails to launch:** Make sure its `.desktop`, `.png`, and `.bin` files are kept together.
+- **Cocoon says the player is not installed:** Check that the custom platform JSON was imported successfully.
 
-This is an independent project, not an official integration from the Cocoon or WinNative developers.
+## 💬 Feedback
 
-Feedback and support
+Found a problem or have an idea to improve the configuration? Open an issue or leave a comment in the discussion where you found this project. I'll do my best to help and improve it.
 
-If you run into any problems, have questions, or find something that could be improved, please leave a comment in this thread. I'll do my best to help and keep improving the configuration based on your feedback!
+## ℹ️ Credits & disclaimer
 
-I hope it helps other WinNative users! ❤️
+This configuration was put together by a community user with help from ChatGPT and tested on the setup listed above.
+
+**This is an unofficial community project.** It is not affiliated with, endorsed by, or supported by the WinNative or Cocoon developers. Product and project names belong to their respective owners.
+
+If this setup helps you, feel free to share it with other users. ❤️
