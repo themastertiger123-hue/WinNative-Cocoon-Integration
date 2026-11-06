@@ -53,7 +53,7 @@ Download **Windows-WinNative-Cocoon-FIX2.json** from the **Releases** section at
 
 When Cocoon asks for the games directory, select the folder containing the exported WinNative shortcut files.
 
-For example: `Juegos frontend`.
+For example: `Games`.
 
 ### 5. Launch!
 
