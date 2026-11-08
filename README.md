@@ -2,76 +2,186 @@
 
 # WinNative × Cocoon
 
-### AUTO-RETURN v5 · Android integration patch
+### AUTO-RETURN v5 — Android integration for Cocoon Frontend
 
-**Launch your WinNative games from Cocoon and return to Cocoon when you exit the WinNative session.**
+**Launch your Windows games from Cocoon using WinNative Standard, then return straight to Cocoon when you exit the WinNative session.**
 
-[⬇️ Download the v5 configuration](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/download/V1.1.0/Windows-WinNative-Cocoon-AUTO-RETURN-v5.json)
-·
-[View the release](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/tag/V1.1.0)
+[⬇️ **Download AUTO-RETURN v5**](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/download/V1.1.0/Windows-WinNative-Cocoon-AUTO-RETURN-v5.json)
+&nbsp; · &nbsp;
+[📦 **Latest release**](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/latest)
+&nbsp; · &nbsp;
+[🐛 **Report an issue**](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/issues)
+
+![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white)
+![Frontend](https://img.shields.io/badge/Frontend-Cocoon-7B61FF)
+![Launcher](https://img.shields.io/badge/Launcher-WinNative-2684FC)
+![Version](https://img.shields.io/badge/Integration-AUTO--RETURN%20v5-2EA44F)
 
 </div>
 
 ---
 
-## What it does
+## 📖 Table of contents
 
-This project adds a custom platform/player configuration to **Cocoon Frontend** for launching game shortcuts exported from **WinNative Standard**.
+- [Overview](#-overview)
+- [Features](#-features)
+- [Requirements](#-requirements)
+- [Repository structure](#-repository-structure)
+- [Installation](#-installation)
+- [Using the integration](#-using-the-integration)
+- [How AUTO-RETURN works](#-how-auto-return-works)
+- [Troubleshooting](#-troubleshooting)
+- [Compatibility and testing](#-compatibility-and-testing)
+- [Version history](#-version-history)
+- [Credits and disclaimer](#-credits-and-disclaimer)
 
-The AUTO-RETURN v5 player also makes WinNative return to Cocoon when you choose **Exit** from WinNative's side menu.
+## 🎮 Overview
 
-> This is an integration configuration, not a game mod. It does not patch game files or change your saves.
+**WinNative × Cocoon** is an unofficial custom-platform and player configuration for Android. It connects **Cocoon Frontend** with **WinNative Standard**, allowing game shortcuts exported from WinNative to appear in your Cocoon library and launch from there.
 
-## Repository contents
+The main improvement in **AUTO-RETURN v5** is the session exit behaviour. When a game is launched through Cocoon with the custom player, choosing **Exit** from WinNative's side menu closes the WinNative session and brings Cocoon back to the foreground.
 
-The repository is arranged so the current download is easy to identify:
+This project is a frontend integration patch: it configures how Cocoon starts WinNative. It does **not** modify the games themselves, game files, saves, or WinNative installations.
 
-- **`config/`** — the current AUTO-RETURN v5 JSON configuration. This is the version to use for new installations.
-- **`archive/`** — the older FIX2 configuration, kept only for reference. It has been superseded by v5.
+## ✨ Features
 
-The downloadable file attached to the latest release is the recommended download. You do not need the archived FIX2 file.
+- **Cocoon library integration:** use exported WinNative game shortcuts from your Cocoon library.
+- **Dedicated player entry:** adds **WinNative Standard (Cocoon return)**, separate from the regular WinNative Standard player.
+- **Direct return to Cocoon:** the tested AUTO-RETURN flow brings Cocoon back when you select **Exit** in WinNative's side menu.
+- **Existing game data stays untouched:** the configuration does not alter game files, saves, or exported artwork.
+- **Easy to identify:** the current v5 configuration is kept separate from older files.
 
-## Requirements
+## 📱 Requirements
 
-- Android device with **Cocoon Frontend** installed.
-- **WinNative Standard**, using package name `com.winnative.cmod`.
-- At least one game added to WinNative and its shortcut exported.
+Before installing, make sure you have:
 
-## Installation
+- An Android device.
+- **Cocoon Frontend** installed.
+- **WinNative Standard** installed with the Android package name `com.winnative.cmod`.
+- At least one game added to WinNative.
+- The game's shortcut exported from WinNative, including the associated export files.
 
-1. Download the **AUTO-RETURN v5 JSON** using the download button above.
-2. In Cocoon, open **Settings → Library & Data → Platforms → Custom Platform** and import the JSON.
-3. Open the **Windows (WinNative)** platform settings.
-4. Set **Default player** to **WinNative Standard (Cocoon return)**.
-5. Select the folder containing your exported WinNative shortcut files.
-6. Launch a game from Cocoon.
+## 📁 Repository structure
 
-Keep each game's exported `.desktop`, `.png` and `.bin` files together. Select their containing folder, not an individual shortcut file.
+The repository is organised to distinguish the current patch from previous versions:
 
-## Returning to Cocoon
+| Location | Contents | Which should I use? |
+|---|---|---|
+| `README.md` | Project overview, installation guide and troubleshooting | Start here |
+| `config/` | Current AUTO-RETURN v5 JSON configuration | **Use this for the current setup** |
+| `archive/` | Previous FIX2 configuration, retained for reference | Only for legacy setups |
+| GitHub Releases | Versioned downloads and release information | **Recommended download location** |
 
-While the game is running, open WinNative's side menu and choose **Exit**. The WinNative session should close and Cocoon should come back to the foreground.
+For a new installation, download the JSON attached to the [latest release](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/latest). The archived FIX2 file is an older configuration and has been superseded by v5.
 
-**Important:** this return behaviour is for games launched from Cocoon with the custom player. It is triggered by WinNative's side-menu **Exit** option; it is not intended to intercept the game's own Quit option or sessions started directly inside WinNative.
+## 🛠️ Installation
 
-## Verification and compatibility
+### 1. Export your game shortcuts from WinNative
 
-The project creator has successfully tested the AUTO-RETURN v5 return flow on their Android device. Other devices, Cocoon versions and WinNative builds may behave differently; compatibility beyond the tested setup is not guaranteed.
+In WinNative, use its shortcut export function for the games you want to display in Cocoon.
 
-## Troubleshooting
+Keep the files associated with each game together. Depending on the export, these can include:
+
+- `.desktop` — the game shortcut Cocoon uses to identify and launch the game.
+- `.png` — artwork for the shortcut.
+- `.bin` — additional shortcut data.
+
+Do not rename or separate files belonging to the same game.
+
+### 2. Download AUTO-RETURN v5
+
+Download the configuration file from the link at the top of this page:
+
+**[Download Windows-WinNative-Cocoon-AUTO-RETURN-v5.json](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/download/V1.1.0/Windows-WinNative-Cocoon-AUTO-RETURN-v5.json)**
+
+The release download is the recommended file for installation.
+
+### 3. Import the configuration into Cocoon
+
+1. Open **Cocoon**.
+2. Go to **Settings → Library & Data → Platforms**.
+3. Open **Custom Platform** and import the downloaded JSON file.
+4. Find the **Windows (WinNative)** platform in your library settings.
+5. Under **Default player**, select **WinNative Standard (Cocoon return)**.
+
+There may also be a regular **WinNative Standard** entry. Make sure you select the one that says **Cocoon return**, as this is the player containing the AUTO-RETURN launch configuration.
+
+### 4. Choose your exported games folder
+
+When Cocoon asks for the games directory, select the folder containing the WinNative shortcut exports.
+
+For example, if your exported shortcuts are stored in a folder named `Games frontend`, select that folder. Do not select an individual `.desktop` file.
+
+Once the folder is selected and Cocoon has scanned it, your exported games should appear in the Windows (WinNative) platform.
+
+## ▶️ Using the integration
+
+1. Open the **Windows (WinNative)** platform in Cocoon.
+2. Choose the game you want to play.
+3. Launch it using **WinNative Standard (Cocoon return)**.
+4. When you have finished playing, open WinNative's side menu.
+5. Select **Exit** to end the WinNative session.
+
+After the WinNative session closes, Cocoon should return to the foreground.
+
+> **Important:** AUTO-RETURN v5 is designed for the WinNative side-menu **Exit** action after launching through Cocoon with the custom player. It is not intended to intercept a game's own in-game Quit option, nor does the return flow apply to sessions started directly inside WinNative.
+
+## 🔄 How AUTO-RETURN works
+
+The custom player starts WinNative's display activity with the launch information expected by WinNative's shortcut/session handling. It includes the shortcut path, the Android `ACTION_VIEW` intent, the WinNative shortcut URI and the frontend-session flag.
+
+This lets WinNative recognise the launch as coming from the Cocoon integration. When the session is ended with the supported **Exit** action, WinNative closes instead of leaving its library in front of Cocoon.
+
+The v5 configuration also uses its own player identifier. This keeps **WinNative Standard (Cocoon return)** separate from the regular WinNative player entry in Cocoon.
+
+You do not need to edit the JSON manually for a normal installation.
+
+## 🧰 Troubleshooting
 
 | Problem | What to check |
 |---|---|
-| WinNative opens its library instead of returning to Cocoon | Make sure **WinNative Standard (Cocoon return)** is selected as the default player, then launch the game from Cocoon and use WinNative's side-menu **Exit**. |
-| Games do not appear | Check that Cocoon is pointed at the folder containing the exported shortcuts. Keep each game's related export files together. |
-| Cocoon says WinNative is not installed | Confirm that WinNative Standard is installed and its package name is `com.winnative.cmod`. |
+| WinNative returns to its own library instead of Cocoon | Confirm that **WinNative Standard (Cocoon return)** is selected as the default player. Start the game from Cocoon and use **Exit** in WinNative's side menu. |
+| The game does not appear in Cocoon | Check that Cocoon is scanning the folder containing the exported shortcuts. Keep each game's `.desktop`, `.png` and `.bin` files together. |
+| Cocoon says WinNative is not installed | Confirm that WinNative Standard is installed and that its package name is `com.winnative.cmod`. |
+| The wrong WinNative player is being used | Open the Windows (WinNative) platform settings and select **WinNative Standard (Cocoon return)** as the default player. |
+| The return behaviour does not happen when quitting a game | End the WinNative session using **Exit** from WinNative's side menu. The game's own Quit option is not the tested return method. |
 
-## Report a problem
+If the problem persists, include your device model, Android version, Cocoon version and WinNative build when [opening an issue](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/issues).
 
-[Open an issue](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/issues) and include your Android device/version, Cocoon version, WinNative build, and what happened.
+## ✅ Compatibility and testing
 
-## Credits and disclaimer
+The AUTO-RETURN v5 flow has been successfully tested by the project creator on an Android device.
 
-An independent community project. It is not affiliated with, endorsed by, or supported by the developers of Cocoon or WinNative. Product names belong to their respective owners.
+| Component | Configuration |
+|---|---|
+| Operating system | Android |
+| Frontend | Cocoon Frontend |
+| Launcher | WinNative Standard |
+| Android package | `com.winnative.cmod` |
+| Custom player | WinNative Standard (Cocoon return) |
+| Configuration revision | AUTO-RETURN v5 |
+| Tested return action | WinNative side-menu **Exit** |
 
-Created by a community user with assistance from ChatGPT. Testing and feedback are welcome.
+Compatibility with other Android devices, Cocoon versions and WinNative builds may vary. The return flow is confirmed on the creator's setup, but not every possible device or version combination has been tested.
+
+## 🧾 Version history
+
+### AUTO-RETURN v5 — current
+
+- Added the frontend-session launch information required for the tested return-to-Cocoon flow.
+- Added a dedicated player identifier to distinguish the custom player from regular WinNative Standard.
+- Confirmed that ending the WinNative session through the side-menu **Exit** action returns to Cocoon on the creator's device.
+
+### FIX2 — archived
+
+The previous FIX2 configuration is retained in the `archive/` folder for reference. It is no longer the recommended version for new installations.
+
+For downloads and version details, visit [GitHub Releases](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases).
+
+## 🤝 Credits and disclaimer
+
+This is an independent community project created to improve the workflow between Cocoon Frontend and WinNative Standard.
+
+It is **not affiliated with, endorsed by, or supported by** the developers of Cocoon or WinNative. All product names and trademarks belong to their respective owners.
+
+Created by a community member with assistance from ChatGPT. Testing reports, feedback and contributions are welcome.
