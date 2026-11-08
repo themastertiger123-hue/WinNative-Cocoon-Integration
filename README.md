@@ -22,6 +22,15 @@ The AUTO-RETURN v5 player also makes WinNative return to Cocoon when you choose 
 
 > This is an integration configuration, not a game mod. It does not patch game files or change your saves.
 
+## Repository contents
+
+The repository is arranged so the current download is easy to identify:
+
+- **`config/`** — the current AUTO-RETURN v5 JSON configuration. This is the version to use for new installations.
+- **`archive/`** — the older FIX2 configuration, kept only for reference. It has been superseded by v5.
+
+The downloadable file attached to the latest release is the recommended download. You do not need the archived FIX2 file.
+
 ## Requirements
 
 - Android device with **Cocoon Frontend** installed.
