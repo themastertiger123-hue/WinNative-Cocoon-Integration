@@ -6,9 +6,7 @@
 
 **Launch your Windows games from Cocoon using WinNative Standard, then return straight to Cocoon when you exit the WinNative session.**
 
-[⬇️ **Download AUTO-RETURN v5**](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/download/V1.1.0/Windows-WinNative-Cocoon-AUTO-RETURN-v5.json)
-&nbsp; · &nbsp;
-[📦 **Latest release**](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/latest)
+[📦 **Get AUTO-RETURN v5 from Releases**](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/latest)
 &nbsp; · &nbsp;
 [🐛 **Report an issue**](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/issues)
 
@@ -90,11 +88,7 @@ Do not rename or separate files belonging to the same game.
 
 ### 2. Download AUTO-RETURN v5
 
-Download the configuration file from the link at the top of this page:
-
-**[Download Windows-WinNative-Cocoon-AUTO-RETURN-v5.json](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/download/V1.1.0/Windows-WinNative-Cocoon-AUTO-RETURN-v5.json)**
-
-The release download is the recommended file for installation.
+Open the [latest GitHub Release](https://github.com/themastertiger123-hue/WinNative-Cocoon-Integration/releases/latest) and download the attached file named **`Windows-WinNative-Cocoon-AUTO-RETURN-v5.json`** from its **Assets** section. Use the JSON attached to the release; you do not need to download the file from the repository's code list.
 
 ### 3. Import the configuration into Cocoon
 
